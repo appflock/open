@@ -1,0 +1,10 @@
+PODS:
+  - NSDate-Time-Ago (1.0.1)
+
+DEPENDENCIES:
+  - NSDate-Time-Ago (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  NSDate-Time-Ago: 6c2f55530dec7471e90106d84bb34bba6660c139
+
+COCOAPODS: 0.34.1

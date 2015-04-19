@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open - Anonymous app web version</title>
+  </head>
+  <body>
+    <p><%= post.content%> - <%= post.company %></p>
+		<ul>
+		<% for (var i = 0; i < comments.length; i++) { %>
+      <li><%= comments[i].content %> - <%= comments[i].company %></li>
+    <% } %>
+    </ul>
+  </body>
+</html>

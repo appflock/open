@@ -1,0 +1,24 @@
+//
+//  Reveal-Prefix.pch
+//  Reveal
+//
+//
+
+#ifndef Reveal_Reveal_Prefix_pch
+#define Reveal_Reveal_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Constants.h"
+
+#import <Parse/Parse.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
+#import <ParseUI/ParseUI.h>
+
+#import "UIColor+AppColors.h"
+#import "NSString+Utils.h"
+#import "PFUser+Profile.h"
+#import "ActivityCache.h"
+
+#endif

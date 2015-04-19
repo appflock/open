@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OvX-nf-vzd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Post-->
+        <scene sceneID="9l8-YU-QZi">
+            <objects>
+                <viewController title="Edit Post" automaticallyAdjustsScrollViewInsets="NO" id="g3E-cn-vxk" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGS-b6-1K1"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4L-1o-v1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HjC-gG-fpc">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuB-1w-YWP" customClass="GCPlaceholderTextView">
+                                <rect key="frame" x="16" y="74" width="568" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uuB-1w-YWP" firstAttribute="top" secondItem="hGS-b6-1K1" secondAttribute="bottom" constant="10" id="2aK-fB-6fM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uuB-1w-YWP" secondAttribute="trailing" id="9iN-Op-3D2"/>
+                            <constraint firstItem="uuB-1w-YWP" firstAttribute="leading" secondItem="HjC-gG-fpc" secondAttribute="leadingMargin" id="WMc-ux-zP3"/>
+                            <constraint firstItem="s4L-1o-v1w" firstAttribute="top" secondItem="uuB-1w-YWP" secondAttribute="bottom" constant="10" id="vlX-rb-Wun"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jAu-j6-ujb">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="j4x-0k-ccx">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="g3E-cn-vxk" id="BXO-iH-83G"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="b0v-4P-8qw">
+                            <connections>
+                                <action selector="saveButtonAction:" destination="g3E-cn-vxk" id="kzA-Ic-cSZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="uuB-1w-YWP" id="SJK-am-KjI"/>
+                        <outlet property="contentTextViewBottomConstraint" destination="vlX-rb-Wun" id="SEk-6b-Qme"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WOP-HX-ktF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3539" y="352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="COG-2d-Yf1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OvX-nf-vzd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gRH-XZ-zxe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.1960784314" green="0.19215686269999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g3E-cn-vxk" kind="relationship" relationship="rootViewController" id="wjc-Kv-Adh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6N-I1-sW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2879" y="352"/>
+        </scene>
+    </scenes>
+</document>
